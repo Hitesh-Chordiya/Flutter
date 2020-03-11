@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(new MyApp());
 }
+
 //hello
 class MyApp extends StatelessWidget {
   @override
@@ -77,14 +78,30 @@ class _LoginPageState extends State<LoginPage>
                           ),
                           new Padding(
                               padding: const EdgeInsets.only(top: 20.00)),
-                          new MaterialButton(
-                              height: 50.00,
-                              minWidth: 80.00,
-                              splashColor: Colors.redAccent,
-                              onPressed: () => {},
-                              color: Colors.teal,
-                              textColor: Colors.white,
-                              child: new Icon(Icons.arrow_forward_ios))
+                          new Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              new MaterialButton(
+
+                                  height: 50.00,
+                                  minWidth: 80.00,
+                                  splashColor: Colors.redAccent,
+                                  onPressed: () => {},
+                                  color: Colors.teal,
+                                  textColor: Colors.white,
+                                  child: new Text("Sign In")),
+                              new Padding(padding: EdgeInsets.all(40.00)),
+                              new MaterialButton(
+                                  height: 50.00,
+                                  minWidth: 80.00,
+                                  splashColor: Colors.redAccent,
+                                  onPressed: () => {},
+                                  color: Colors.teal,
+                                  textColor: Colors.white,
+                                  child: new Text("Sign Up"))
+                            ],
+                          )
+
                         ],
                       ),
                     )),
