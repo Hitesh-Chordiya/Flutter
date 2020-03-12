@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: "Attendance App",
       theme: new ThemeData(
-          brightness: Brightness.dark, primarySwatch: Colors.teal),
+          brightness: Brightness.dark, primarySwatch: Colors.blue),
       home: new LoginPage(),
     );
   }
@@ -72,17 +71,20 @@ class _LoginPageState extends State<LoginPage>
                   size: _iconAnimation.value * 100,
                 ),
                 new Container(
-                  margin: new EdgeInsets.only(left: 20.00, right: 20.00),
+                  padding: EdgeInsets.only(
+                      left: 60.00, right: 60.00, top: 20.00, bottom: 40.00),
+                  margin: new EdgeInsets.only(
+                      top: 20.00, left: 20.00, right: 20.00),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.00),
                       color: Colors.white,
                       shape: BoxShape.rectangle,
                       boxShadow: [
                         BoxShadow(
-                            color: Colors.grey,
+                            color: Colors.black38,
                             blurRadius: 5.0,
                             spreadRadius: 2.0,
-                            offset: const Offset(3.0, 5.0)),
+                            offset: const Offset(0, 0)),
                       ]),
                   child: new Form(
                     autovalidate: true,
@@ -91,25 +93,46 @@ class _LoginPageState extends State<LoginPage>
                             brightness: Brightness.light,
                             primarySwatch: Colors.blue,
                             inputDecorationTheme: new InputDecorationTheme(
-                                helperStyle: new TextStyle(
-                                    color: Colors.blue, fontSize: 10.00))),
+                                labelStyle: new TextStyle(
+                                    color: Colors.blue, fontSize: 15.00))),
                         child: Container(
                           child: new Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
+                              new Text("LOGIN",
+                                  style: TextStyle(
+                                      fontFamily: 'BalooChettan2',
+                                      color: Colors.black54,
+                                      fontSize: 40.00,
+                                      fontWeight: FontWeight.w500,
+                                      letterSpacing: 2.0),
+                                  textAlign: TextAlign.center),
+                              new Padding(
+                                  padding: EdgeInsets.only(bottom: 25.00)),
                               new TextFormField(
+                                style: TextStyle(
+                                    fontFamily: 'BalooChettan2',
+                                    color: Colors.black54,
+                                    fontSize: 30.00,
+                                    fontWeight: FontWeight.bold),
                                 decoration: new InputDecoration(
                                     labelText: "Enter Email"),
                                 keyboardType: TextInputType.emailAddress,
                               ),
                               new TextFormField(
+                                style: TextStyle(
+                                    fontFamily: 'BalooChettan2',
+                                    color: Colors.black54,
+                                    fontSize: 30.00,
+                                    fontWeight: FontWeight.bold),
+
                                 decoration: new InputDecoration(
                                     labelText: "Enter Password"),
                                 keyboardType: TextInputType.text,
                                 obscureText: true,
                               ),
                               new Padding(
-                                  padding: const EdgeInsets.only(top: 20.00)),
+                                  padding: const EdgeInsets.only(top: 30.00)),
                               new Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
@@ -123,15 +146,7 @@ class _LoginPageState extends State<LoginPage>
                                       onPressed: () => {},
                                       color: Color.fromARGB(255, 52, 127, 228),
                                       textColor: Colors.white,
-                                      child: new Text("Sign In")),
-                                  /*new MaterialButton(
-                                      height: 50.00,
-                                      minWidth: 80.00,
-                                      splashColor: Colors.redAccent,
-                                      onPressed: () => {},
-                                      color: Colors.teal,
-                                      textColor: Colors.white,
-                                      child: new Text("Sign Up"))*/
+                                      child: new Text("Sign In"))
                                 ],
                               )
                             ],
