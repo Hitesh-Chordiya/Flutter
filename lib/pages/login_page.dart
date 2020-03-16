@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app/pages/homepage.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -228,6 +229,11 @@ class _LoginPageState extends State<LoginPage>
                                                     .showSnackBar(
                                                     successSnackBar);
                                               });
+                                              Navigator.push(
+                                                  context,MaterialPageRoute(
+                                                builder: (context)=>TeacherPage(),
+                                              )
+                                              );
                                             } else {
                                               scaffoldKey.currentState
                                                   .showSnackBar(errSnackBar);
