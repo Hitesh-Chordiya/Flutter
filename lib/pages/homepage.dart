@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
 
         child: new ListView(
           children: <Widget>[
-            new UserAccountsDrawerHeader(accountName: new Text("Hitesh",style: TextStyle(fontSize: 20.0),),
+            new UserAccountsDrawerHeader(accountName: new Text("Hitesh ",style: TextStyle(fontSize: 20.0),),
                 accountEmail: new Text("hietshac1999@gmail.com",style: TextStyle(fontSize: 15.0)),
              currentAccountPicture:new CircleAvatar(
                backgroundColor: Colors.black87,
