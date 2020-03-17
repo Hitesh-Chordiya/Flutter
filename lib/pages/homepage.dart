@@ -1,7 +1,10 @@
 //import 'package:flutter/cupertino.dart';
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/login_page.dart';
 void main()=>runApp(new TeacherPage());
 class TeacherPage extends StatelessWidget {
   @override
@@ -34,10 +37,19 @@ class HomePage extends StatelessWidget {
               width: 48.0,
               height: 48.0,
               child:Center(
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                      context,MaterialPageRoute(
+                    builder: (context)=>LoginPage(),
+                  )
+                  );
+
+                },
                 child: Text(
                   '$index',
                   style: Theme.of(context).textTheme.headline,
-                ),
+                ),)
               ),
             ),
 
